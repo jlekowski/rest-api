@@ -1,0 +1,4 @@
+php ~/composer.phar create-project symfony/framework-standard-edition rest-api
+
+CREATE DATABASE restapi CHARACTER SET = utf8mb4 COLLATE utf8mb4_unicode_ci; 
+
