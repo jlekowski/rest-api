@@ -2,3 +2,9 @@ php ~/composer.phar create-project symfony/framework-standard-edition rest-api
 
 CREATE DATABASE restapi CHARACTER SET = utf8mb4 COLLATE utf8mb4_unicode_ci; 
 
+php ~/composer.phar require "jms/serializer-bundle" "@stable"
+php ~/composer.phar require "friendsofsymfony/rest-bundle" "@stable"
+
+php app/console --version
+php app/console generate:bundle
+
