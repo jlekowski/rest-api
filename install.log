@@ -8,3 +8,4 @@ php ~/composer.phar require "friendsofsymfony/rest-bundle" "@stable"
 php app/console --version
 php app/console generate:bundle
 
+php app/console router:debug
