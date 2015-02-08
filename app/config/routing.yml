@@ -3,6 +3,10 @@ rest_api:
     type:     annotation
     prefix:   /
 
+users:
+    type:     rest
+    resource: RestApi\Bundle\Controller\UsersController
+
 app:
     resource: @AppBundle/Controller/
     type:     annotation

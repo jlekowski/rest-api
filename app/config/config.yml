@@ -79,6 +79,12 @@ sensio_framework_extra:
 fos_rest:
     format_listener:
         rules:
-            - { prefer_extension: false }
+            # html requires creating a template
+            - { priorities: [json, xml], fallback_format: json, prefer_extension: false }
     view:
+        # to return data instead of Response/JsonResponse object
         view_response_listener: true
+    exception:
+        enabled: true
+        exception_controller: 'RestApi\Bundle\Controller\UsersController::exceptionAction'
+#        exception_wrapper_handler: RestApi\Bundle\Controller\UsersController
