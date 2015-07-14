@@ -1,17 +1,16 @@
-php ~/composer.phar create-project symfony/framework-standard-edition rest-api
+composer create-project symfony/framework-standard-edition rest-api
 
 CREATE DATABASE restapi CHARACTER SET = utf8mb4 COLLATE utf8mb4_unicode_ci; 
 
-php ~/composer.phar require "jms/serializer-bundle" "@stable"
-php ~/composer.phar require "friendsofsymfony/rest-bundle" "@stable"
+composer require "jms/serializer-bundle" "@stable"
+composer require "friendsofsymfony/rest-bundle" "@stable"
 
 php app/console --version
 php app/console generate:bundle
 
 php app/console router:debug
 
-chmod 777 -R app/cache/
-chmod 777 -R app/logs/
+# http://symfony.com/doc/current/book/installation.html#configuration-and-setup
+chmod -R 777 app/cache/ app/logs/
 
-git checkout app/cache/.gitkeep
-git checkout app/logs/.gitkeep
+git checkout app/cache/.gitkeep app/logs/.gitkeep
