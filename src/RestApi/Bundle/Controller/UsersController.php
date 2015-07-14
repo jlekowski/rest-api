@@ -3,26 +3,55 @@
 namespace RestApi\Bundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use FOS\RestBundle\Controller\Annotations\View;
 
 class UsersController extends Controller
 {
     /**
      * @return array
-     * @View()
      */
     public function getUsersAction()
     {
 //        throw new \Exception('test exception');
-        return ['users' => ['Jan', 'Test']];
+        return ['User' => ['Jan', 'Test']];
     }
 
     /**
-     * @return string
-     * @View()
+     * @return array
+     */
+    public function getUserAction($id)
+    {
+//        throw new \Exception('test exception');
+        return ['User'.$id => ['Jan', 'Test']];
+    }
+
+    /**
+     * @return array
+     */
+    public function getUserNameAction($id)
+    {
+        return [$id, 'some name'];
+    }
+
+    public function postUserAction()
+    {
+
+    }
+
+    public function putUserAction($id)
+    {
+
+    }
+
+    public function deleteUserAction($id)
+    {
+
+    }
+
+    /**
+     * @return array
      */
     public function exceptionAction()
     {
-        return 'exception';
+        return ['exception'];
     }
 }

@@ -10,6 +10,7 @@ php app/console generate:bundle
 
 php app/console router:debug
 
+# http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html
 # http://symfony.com/doc/current/book/installation.html#configuration-and-setup
 chmod -R 777 app/cache/ app/logs/
 
