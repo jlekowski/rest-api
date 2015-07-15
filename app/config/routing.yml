@@ -3,9 +3,17 @@ rest_api:
     type:     annotation
     prefix:   /
 
-users:
-    type:     rest
+users_v1:
     resource: RestApi\Bundle\Controller\UsersController
+    type: rest
+    prefix: /v1
+    name_prefix: v1_
+
+users_v2:
+    resource: RestApi\Bundle\Controller\UsersControllerV2
+    type: rest
+    prefix: /v2
+    name_prefix: v2_
 
 app:
     resource: @AppBundle/Controller/
